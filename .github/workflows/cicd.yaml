@@ -23,3 +23,12 @@ jobs:
       
       - name: Run Tests
         run: pytest tests
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: deploy
+        env:
+          DEPLOY_URL: "https://api.render.com/deploy/srv-d72s7u1r0fns73afkpd0?key=i84-m7zw3KU"
+        run: curl "$DEPLOY_URL"
