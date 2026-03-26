@@ -2,7 +2,7 @@ name: Hello
 
 on:
   push:
-    branches:
+    branches: 
     - main
 
 jobs:
@@ -11,4 +11,5 @@ jobs:
 
     steps:
     - name: Hello
-      run: echo "Hello World!"
+      run: echo "Hello Philip!"
+  
